@@ -1,0 +1,143 @@
+
+
+ 
+   [
+  {
+      "id": 1,
+      "company": "Digilians - الرواد الرقميون",
+      "companyEn": "Digilians",
+      "logo": "digiliansLogo",
+      "position": "Full Stack Web Developer",
+      "positionEn": "Full Stack Web Developer",
+      "type":  "دوام كامل" ,
+      "period": "Feb 2026 - Present",
+      "duration":"3 شهور",
+      "location": "سوريا الحسكة",
+      "locationType": "عمل مكتبي",
+      "technologies": [
+        {
+          "name": "React.js",
+          "icon":" <FaReact />",
+          "color": "#61DAFB"
+        },
+        {
+          "name": "Node.js",
+          "icon": "<FaNodeJs />",
+          "color": "#68A063"
+        },
+        {
+          "name": "Express.js",
+          "icon": "<SiExpress />",
+          "color": "#000000"
+        },
+        {
+          "name": "MongoDB",
+          "icon": "<SiMongodb />",
+          "color": "#47A248"
+        },
+        {
+          "name": "Git",
+          "icon": "<FaGitAlt />",
+          "color": "#F05032"
+        }
+      ],
+      "challenge":"كان التطبيق يعاني من بطء شديد في تحميل البيانات وأداء ضعيف في الاستعلامات، مما أثر سلباً على تجربة المستخدمين.",
+
+      "action": " إعادة هيكلة قاعدة البيانات وتحسين الاستعلامات باستخدام الفهارس (Indexes)\n• تطبيق تقنيات التخزين المؤقت (Caching) باستخدام Redis\n• تحسين أداء الـ API بتقليل حجم البيانات وإضافة Pagination\n• استخدام React Query لإدارة حالة البيانات وتحسين التحميل",
+      "result":" تحسين سرعة تحميل البيانات بنسبة 85%\n• تقليل زمن استجابة الـ API من 3 ثوانٍ إلى أقل من 0.5 ثانية\n• زيادة رضا المستخدمين وتحسين معدل الاحتفاظ بنسبة 25%",
+      "isCurrent": true
+    },
+    {
+      "id": 2,
+      "company": "Web Masters",
+      "companyEn": "Web Masters",
+      "logo": "webMastersLogo",
+      "position": "متدرب تطوير واجهة أمامية",
+      "positionEn": "Front-End Development Intern",
+      "type": "تدريب" , 
+      "period": "Sep 2024 - Dec 2024",
+      "duration":  "4 شهور" ,
+      "location": "عن بعد",
+      "locationType": "عن بعد",
+      "technologies": [
+        {
+          "name": "HTML5",
+          "icon": "<FaHtml5 />",
+          "color": "#E34F26"
+        },
+        {
+          "name": "CSS3",
+          "icon": "<FaCss3Alt />",
+          "color": "#1572B6"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "<FaJs />",
+          "color": "#F7DF1E"
+        },
+        {
+          "name": "React.js",
+          "icon": "<FaReact />",
+          "color": "#61DAFB"
+        },
+        {
+          "name": "Bootstrap",
+          "icon": "<FaBootstrap />",
+          "color": "#7952B3"
+        },
+        {
+          "name": "Git",
+          "icon": "<FaGitAlt />",
+          "color": "#F05032"
+        }
+      ],
+      "challenge":           "تطبيق التجارة الإلكترونية كان يعاني من واجهة مستخدم غير متجاوبة وضعف في إعادة استخدام المكونات، مما زاد من وقت التطوير والتعقيد.",
+      "action": " بناء مكونات React قابلة لإعادة الاستخدام باستخدام Props و State management\n• تطبيق تصميم متجاوب بالكامل باستخدام Bootstrap و CSS Flexbox\n• تحسين أداء التطبيق باستخدام React.memo و useCallback\n• إنشاء نظام لإدارة حالة السلة باستخدام Context API",
+      "result": " تقليل وقت تطوير الميزات الجديدة بنسبة 40%\n• تحسين تجربة المستخدم عبر جميع الأجهزة\n• إعادة استخدام المكونات بنسبة 60% في صفحات مختلفة",
+      "isCurrent": false
+    },
+    {
+      "id": 3,
+      "company": "اكاديمية مبرمجي المستقبل",
+      "companyEn": "SEF Academy",
+      "logo": "sefAcademyLogo",
+      "position":"متدرب تطوير واجهة أمامية",
+      "positionEn": "Front-End Development Intern",
+      "type": "تدريب" ,
+      "period": "Aug 2024 - Oct 2024",
+      "duration":  "3 شهور" ,
+      "location": "عن بعد",
+      "locationType": "عن بعد",
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "icon": "<FaJs />",
+          "color": "#F7DF1E"
+        },
+        {
+          "name": "React.js",
+          "icon": "<FaReact />",
+          "color": "#61DAFB"
+        },
+        {
+          "name": "Git",
+          "icon": "<FaGitAlt />",
+          "color": "#F05032"
+        },
+        {
+          "name": "Bootstrap",
+          "icon": "<FaBootstrap />",
+          "color": "#7952B3"
+        }
+      ],
+      "challenge":
+          "التطبيق كان يعاني من سوء تنظيم الكود وصعوبة في التعاون الجماعي بسبب عدم استخدام نظام فعال للتحكم في الإصدارات.",
+      "action":
+         "• تطبيق سير عمل Git/GitHub باستخدام استراتيجية Git Flow\n• إجراء مراجعات الكود (Code Reviews) لضمان جودة الكود\n• إعادة هيكلة المشروع باستخدام مبدأ فصل المسؤوليات (Separation of Concerns)\n• توثيق الـ API والتعامل معها باستخدام Axios",
+      "result":
+           "• تحسين كفاءة التعاون الجماعي بنسبة 50%\n• تقليل عدد الأخطاء البرمجية (Bugs) بنسبة 35%\n• تسريع عملية التطوير بنسبة 30%",
+      "isCurrent": false
+    }
+  ]
+
+

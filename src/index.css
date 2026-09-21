@@ -1,111 +1,82 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+@custom-variant dark (&:where(.dark, .dark *));
+@import "tailwindcss";
+@theme {
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  /* my themes */
+  --color-primary: #03045e;
+  --color-secondary: #0077b6;
+  --color-primary-dark: #fca311;
+  --color-secondary-dark: theme(--color-gray-400);
+  --color-amazon:#f08804;
+  --color-postion:#d1d2d2;
+  /* font   */
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  /* break point */
+  --breakpoint-xs: 400px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+@layer components {
+  .card-container {
+    @apply grid sm:grid-cols-2 rounded-xl lg:grid-cols-3 justify-items-center gap-5 p-1 px-2 md:p-4 md:px-10  bg-gray-50 dark:bg-gray-900;
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  .card {
+    @apply w-full border border-gray-300 dark:border-gray-600 rounded-xl p-4 space-y-3 bg-white dark:bg-gray-800 dark:hover:border-b-blue-300 transition;
   }
-}
-
-body {
-  margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  .card-header{
+    @apply md:flex  gap-2 items-center ;
   }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+  .card-img {
+    @apply md:size-12  size-10 border mask-cover border-gray-300 dark:border-gray-600 p-0.5 xs:p-1 rounded-xl ;
   }
-}
-p {
-  margin: 0;
-}
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
+  .card-title {
+    @apply text-sm md:text-lg xl:text-xl font-semibold text-primary dark:text-amazon font-title text-center;
+  }
+    .card-sub-title {
+      @apply  my-1 md:my-2 text-primary dark:text-white font-body font-semibold text-xs md:text-sm lg:text-lg text-center xs:text-start;
+    }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  .card-body {
+    @apply text-sm text-gray-700 font-medium font-body dark:text-gray-200;
+  }
+  .card-body-detials{
+    @apply text-sm text-gray-700 font-normal dark:text-gray-200 space-y-1 mt-4;
+  }
+    .car-item{
+      @apply bg-green-100/10 border-l-2 rounded-2xl border-green-500 p-4;
+    }
+  .card-footer {
+    @apply grid gap-2 mt-4 xs:grid-cols-3;
+  }
+
+  .primary-btn {
+    @apply bg-primary dark:bg-primary-dark dark:text-black px-4 py-2 text-white rounded-xl font-semibold hover:shadow-lg active:bg-primary/90 dark:active:bg-primary-dark/90;
+  }
+
+  .secondary-btn {
+    @apply bg-secondary dark:bg-secondary-dark/90 dark:text-black px-4 py-2 text-white rounded-xl font-semibold hover:shadow-lg active:bg-secondary/90 dark:active:bg-secondary-dark/90;
+  }
+  .section{
+    @apply bg-gray-200 dark:bg-gray-950  lg:px-20 md:px-10 px-2 ;
+  }
+  .section-title1{
+    @apply mt-1 py-2 sm:mt-2 sm:py-6 xl:mt-2.5 xl:py-8 text-xl xs:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-balance text-center ;
+  }
+  /* other classes */
+  .company-logo-wrapper{
+    @apply text-center;
+  }
+  .line-div{
+    @apply bg-red-500 h-0.5 md:w-48 xs:w-28 w-20 m-auto mb-6 md:mb-8 lg:mb-12;
+  }
+  .gradient-text{
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent;
+  }
+  .job-type{
+    @apply bg-indigo-400 p-1 md:px-2.5 rounded-2xl text-mauve-900 font-normal;
+  }
 }

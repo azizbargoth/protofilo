@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "role": "Designed and maintained SQL Server databases supporting humanitarian distribution operations, beneficiary tracking, reporting, and daily operational data management."
+  },
+  {
+    "id": 2,
+    "role": "Developed internal C# and SQL Server applications for aid distribution, complaints management, and operational workflows, reducing reliance on manual procedures."
+  },
+  {
+    "id": 3,
+    "role": "Built a standalone SQL Server database for daily distribution operations and supported rapid, accurate reporting for program and support departments."
+  },
+  {
+    "id": 4,
+    "role": "Performed daily data verification and quality checks by reconciling database records against source documentation to maintain data accuracy and integrity."
+  },
+  {
+    "id": 5,
+    "role": "Monitored refugee data entry, distributions, statistics, and documentation, identifying data-quality issues and coordinating corrective actions."
+  },
+  {
+    "id": 6,
+    "role": "Coordinated with UNHCR technical teams to diagnose and resolve database and system issues affecting field operations."
+  },
+  {
+    "id": 7,
+    "role": "Maintained database servers and peripherals and supported business continuity of operational information systems."
+  },
+  {
+    "id": 8,
+    "role": "Designed and maintained secure LAN connectivity between database servers and workstations to support stable system access."
+  },
+  {
+    "id": 9,
+    "role": "Developed SQL queries to improve distribution reporting and support timely operational decision-making."
+  },
+  {
+    "id": 10,
+    "role": "Coordinated data flows between data-entry teams, warehouses, and partner agencies during distribution activities."
+  },
+  {
+    "id": 11,
+    "role": "Trained database and archiving teams on data verification, system usage, and quality-assurance procedures."
+  },
+  {
+    "id": 12,
+    "role": "Responded to a critical database-system incident during continuous operations, diagnosed the issue and restored functionality within a short period while technical support was unavailable, helping maintain continuity of field activities."
+  }
+]

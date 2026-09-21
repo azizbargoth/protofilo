@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@layer components{
+    .nav-bar{
+      @apply fixed flex items-center justify-center z-50 w-full bg-gray-400 dark:bg-gray-900 backdrop-blur-md shadow-sm;
+      }
+    .nav-item {
+        @apply text-gray-500 hover:text-purple-200 text-sm font-medium py-2 px-3;
+      }
+      .nav-logo{
+       @apply size-6 sm:size-10 md:size-14 lg:size-16 ;
+      }
+      .toggler{
+        @apply hidden;
+      }
+      .theme-language {
+        @apply  flex justify-center  border border-gray-400/90 rounded-xl p-1 gap-2; 
+      }
+}
+
+
+
+/* .header {
+  background-color: var(--color-dark);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* Logo */
+/* .img-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  cursor: pointer;
+} */
+
+/* Navbar links */
+/* .nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin-bottom: 0;
+  padding-left: 0;
+  align-items: center;
+} */
+
+/* .nav-menu li a {
+  color: var(--color-text-white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: var(--color-accent); 
+ } */
+
+/* Connect button */
+/* .connect-btn {
+  border: 0;
+  background-color: var(--color-accent) !important;
+  color: var(--color-white) !important;
+  border-radius: 25px !important;
+  padding: 0.5rem 1.5rem !important;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect-btn:hover {
+  background-color: var(--color-dark) !important;
+  color: var(--color-white) !important;
+  transform: translateY(-2px);
+} */
+
+/* Theme & Language buttons */
+/* .theme-toggle,
+.language-toggle {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover,
+.language-toggle:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-dark);
+} */
+
+/* Bootstrap collapse overrides */
+/* @media (max-width: 991.98px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .theme-language-toggles {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+} */
