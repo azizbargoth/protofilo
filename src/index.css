@@ -16,7 +16,7 @@
   --color-primary-lightNav:#2e4052;
   --color-primary-darkNav:theme(--color-gray-800)
   /* font   */
-  --font-title: 'Poppins', sans-serif;
+  --font-title1: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
   /* break point */
   --breakpoint-xs: 400px;
@@ -38,7 +38,7 @@
   }
 
   .card-title {
-    @apply text-lg md:text-xl xl:text-2xl font-semibold text-primary dark:text-amazon font-title text-center;
+    @apply text-lg md:text-xl xl:text-2xl font-semibold text-primary dark:text-amazon  text-center;
   }
     .card-sub-title {
       @apply  my-1 md:my-2 text-primary dark:text-white font-body font-semibold text-xs md:text-sm lg:text-lg text-center xs:text-start;
