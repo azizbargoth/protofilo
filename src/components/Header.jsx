@@ -3,8 +3,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 import logo from "../assets/images/logoP.png";
 import "../assets/css/header.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const [navToggler,setNavToggler]=useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const { isDarkMode, language, toggleTheme, toggleLanguage } = useTheme();
@@ -15,18 +18,18 @@ const Header = () => {
     { name: "home", nameAr: "الرئيسية", path: "/" },
     { name: "about", nameAr: "عنّي", path: "/about" },
     { name: "education", nameAr: "التعليم", path: "/education" },
-    { name: "services", nameAr: "الخدمات", path: "/services" },
+    // { name: "services", nameAr: "الخدمات", path: "/services" },
     { name: "skills", nameAr: "المهارات", path: "/skills" },
     { name: "experience", nameAr: "الخبرات", path: "/experience" },
     { name: "projects", nameAr: "المشاريع", path: "/projects" },
     { name: "achievements", nameAr: "الإنجازات", path: "/achievements" },
-    { name: "testimonials", nameAr: "التوصيات", path: "/testimonials" },
+    // { name: "testimonials", nameAr: "التوصيات", path: "/testimonials" },
   ];
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // عشان الهيدر
+      const offset = 80; // for header margin top
       const top =
         element.getBoundingClientRect().top + window.pageYOffset - offset;
 
@@ -87,74 +90,131 @@ const Header = () => {
   }, []);
 
   return (
-    // <header className="">
+    <header className="">
       <nav className="nav-bar">
-        <div className="flex justify-between items-center h-24">
+        {/* Logo */}
+        <div className="" onClick={handleLogoClick}>
+          <img src={logo} alt="Logo" className="nav-logo" />
+        </div>
 
-          {/* Logo */}
-          <div className="logo" onClick={handleLogoClick}>
-            <img src={logo} alt="Logo" className="nav-logo" />
-          </div>
+        {/* Toggler */}
+        <button
+          className="toggler-btn"
+          type="button"
+          onClick={() => {
+            setNavToggler((prev) => !prev);
+          }}
+        >
+          {navToggler ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faBars} />
+          )}
+        </button>
+        {/* Togler Menu */}
 
-          {/* Toggler */}
-          <button
-            className="toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarContent"
+        {/* Links */}
+
+        <ul className="hidden md:flex" id="navbarContent">
+          {navItems.map((item) => (
+            <li key={item.name} className="nav-item">
+              <a
+                href={`#${item.name}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation(item.name);
+                }}
+                className="nav-item active:text-gray-100-200"
+              >
+                {language === "ar"
+                  ? item.nameAr
+                  : item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Toggles */}
+        <div className="md:flex hidden">
+          <a
+            href="#Connect"
+            onClick={(e) => {
+              e.preventDefault();
+              handleConnectClick();
+            }}
+            className="nav-btn"
           >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+            {language === "ar" ? "تواصل معي" : "Connect Me"}
+          </a>
 
-          {/* Links */}
-          
-            <ul className="hiden md:flex items-center space-x-2" id="navbarContent">
-
+          <div className="theme-language">
+            <button
+              onClick={toggleTheme}
+              className="text-gray-200 text-sm md:text-lg"
+            >
+              {isDarkMode ? "☀️" : "🌙"}
+            </button>
+            <button
+              onClick={toggleLanguage}
+              className="text-gary-800 dark:text-gray-400 text-sm md:text-md"
+            >
+              {language === "en" ? "عربي" : "EN"}
+            </button>
+          </div>
+        </div>
+      </nav>
+      {/* toggler navigation */}
+      <div>
+        {navToggler && (
+          <div className="mobile-nav-menu">
+            <ul>
               {navItems.map((item) => (
-                <li key={item.name} className="">
+                <li key={item.name} className="nav-item">
                   <a
                     href={`#${item.name}`}
                     onClick={(e) => {
                       e.preventDefault();
                       handleNavigation(item.name);
                     }}
-                    className="nav-item active:text-gray-100-200" 
+                    className="nav-item active:text-gray-100-200"
                   >
                     {language === "ar"
                       ? item.nameAr
-                      : item.name.charAt(0).toUpperCase() +
-                        item.name.slice(1)}
+                      : item.name.charAt(0).toUpperCase() + item.name.slice(1)}
                   </a>
                 </li>
               ))}
-
-              <li className="nav-item me-2">
-                <button
-                  onClick={handleConnectClick}
-                  className={`connect-btn nav-link ${
-                    activeSection === "connect" ? "active" : ""
-                  }`}
-                >
-                  {language === "ar" ? "تواصل معي" : "Connect Me"}
-                </button>
-              </li>
-
             </ul>
-
-            {/* Toggles */}
-            <div className="theme-language">
-              <button onClick={toggleTheme} className="text-gray-200">
-                {isDarkMode ? "☀️" : "🌙"}
-              </button>
-              <button onClick={toggleLanguage} className="text-gary-800 dark:text-gray-400">
-                {language === "en" ? "عربي" : "EN"}
-              </button>
+            <div className="flex-col">
+              <a
+                href="#Connect"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleConnectClick();
+                }}
+                className="nav-btn"
+              >
+                {language === "ar" ? "تواصل معي" : "Connect Me"}
+              </a>
+              <div className="">
+                <button
+                  onClick={toggleTheme}
+                  className="text-gray-600 text-sm md:text-lg"
+                >
+                  {isDarkMode ? "☀️" : "🌙"}
+                </button>
+                <button
+                  onClick={toggleLanguage}
+                  className="text-gary-800 dark:text-gray-400 text-sm md:text-md"
+                >
+                  {language === "en" ? "عربي" : "EN"}
+                </button>
+              </div>
             </div>
-
-
-        </div>
-      </nav>
-    // </header>
+          </div>
+        )}
+      </div>
+    </header>
   );
 };
 

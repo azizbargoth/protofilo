@@ -11,6 +11,10 @@
   --color-secondary-dark: theme(--color-gray-400);
   --color-amazon:#f08804;
   --color-postion:#d1d2d2;
+  --color-accent:#ec4899;
+  /* nav colors */
+  --color-primary-lightNav:#2e4052;
+  --color-primary-darkNav:theme(--color-gray-800)
   /* font   */
   --font-title: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -24,7 +28,7 @@
   }
 
   .card {
-    @apply w-full border border-gray-300 dark:border-gray-600 rounded-xl p-4 space-y-3 bg-white dark:bg-gray-800 dark:hover:border-b-blue-300 transition;
+    @apply w-full border border-gray-300 dark:border-gray-800 rounded-xl p-4 space-y-3 bg-white dark:bg-gray-800 dark:hover:border-b-blue-300 transition;
   }
   .card-header{
     @apply md:flex  gap-2 items-center ;
@@ -34,7 +38,7 @@
   }
 
   .card-title {
-    @apply text-sm md:text-lg xl:text-xl font-semibold text-primary dark:text-amazon font-title text-center;
+    @apply text-lg md:text-xl xl:text-2xl font-semibold text-primary dark:text-amazon font-title text-center;
   }
     .card-sub-title {
       @apply  my-1 md:my-2 text-primary dark:text-white font-body font-semibold text-xs md:text-sm lg:text-lg text-center xs:text-start;
@@ -54,11 +58,11 @@
   }
 
   .primary-btn {
-    @apply bg-primary dark:bg-primary-dark dark:text-black px-4 py-2 text-white rounded-xl font-semibold hover:shadow-lg active:bg-primary/90 dark:active:bg-primary-dark/90;
+    @apply text-sm md:text-2xl bg-primary dark:bg-primary-dark dark:text-black px-2 py-1 md:px-4 md:py-2 text-white rounded-xl font-semibold hover:shadow-lg active:bg-primary/90 dark:active:bg-primary-dark/90;
   }
 
   .secondary-btn {
-    @apply bg-secondary dark:bg-secondary-dark/90 dark:text-black px-4 py-2 text-white rounded-xl font-semibold hover:shadow-lg active:bg-secondary/90 dark:active:bg-secondary-dark/90;
+    @apply text-sm md:text-2xl bg-secondary dark:bg-secondary-dark/90 dark:text-black px-2 py-1 md:px-4 md:py-2 text-white rounded-xl font-semibold hover:shadow-lg active:bg-secondary/90 dark:active:bg-secondary-dark/90;
   }
   .section{
     @apply bg-gray-200 dark:bg-gray-950  lg:px-20 md:px-10 px-2 ;
@@ -78,5 +82,8 @@
   }
   .job-type{
     @apply bg-indigo-400 p-1 md:px-2.5 rounded-2xl text-mauve-900 font-normal;
+  }
+  .main-content{
+    @apply mt-40 w-full
   }
 }

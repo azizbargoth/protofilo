@@ -10,6 +10,7 @@
     --color-secondary-dark: theme(--color-gray-400);
     --color-amazon: #f08804;
     --color-postion: #d1d2d2;
+    --color-accent: #ec4899;
     /* font colors  */
     --font-title: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -19,7 +20,7 @@
 
 @layer components {
     .home-section {
-        @apply grid sm:grid-cols-2 rounded-xl lg:grid-cols-3 justify-items-center gap-5 p-1 px-2 md:p-4 md:px-10 bg-gray-50 dark:bg-gray-900;
+        @apply grid grid-cols-1 md:grid-cols-2  justify-items-center gap-5 p-1 px-2 md:p-4 md:px-10;
     }
     .logo-imag {
         @apply mask-cover;

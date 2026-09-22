@@ -20,10 +20,10 @@ import ScrollHandler from '../components/ScrollHandler';
 const AppRouter = ()=> {
    
   return (
-    <div className="app">
+    <div className="">
        <Header />
       {/*<ScrollHandler /> */}
-      <main className="main-content">
+      <main className=" ">
         <Routes>
           <Route path="/" element={
             <>
