@@ -4,7 +4,7 @@ import { HashRouter  as Router ,useLocation} from 'react-router-dom';
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 import AppRouter from './router/router'
-// import './App.css'
+import './App.css'
 import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {

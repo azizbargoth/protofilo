@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
-import logo from "../assets/images/logoP.png";
+import logo from "../assets/images/Aziz_Header_Logo.jpg";
 import "../assets/css/header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -90,8 +90,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="">
-      <nav className="nav-bar">
+    <header className="size-full h-8 sm:h-10 md:h-12 lg:h-14  ">
+      <nav className="nav-bar ">
         {/* Logo */}
         <div className="" onClick={handleLogoClick}>
           <img src={logo} alt="Logo" className="nav-logo" />
@@ -196,7 +196,7 @@ const Header = () => {
               >
                 {language === "ar" ? "تواصل معي" : "Connect Me"}
               </a>
-              <div className="">
+              <div className=" space-x-2">
                 <button
                   onClick={toggleTheme}
                   className="text-gray-600 text-sm md:text-lg"
@@ -205,7 +205,7 @@ const Header = () => {
                 </button>
                 <button
                   onClick={toggleLanguage}
-                  className="text-gary-800 dark:text-gray-400 text-sm md:text-md"
+                  className="text-gary-800  px-2  dark:text-gray-400 text-sm md:text-md border border-gray-300 dark:border-gray-500 rounded-sm"
                 >
                   {language === "en" ? "عربي" : "EN"}
                 </button>

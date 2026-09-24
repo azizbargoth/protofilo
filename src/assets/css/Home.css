@@ -16,17 +16,28 @@
     --font-body: 'Inter', sans-serif;
     /* break point */
     --breakpoint-xs: 400px;
+    /* shadow logo */
+    --shadow-logo:0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 @layer components {
     .home-section {
-        @apply grid grid-cols-1 md:grid-cols-2  justify-items-center gap-5 p-1 px-2 md:p-4 md:px-10;
+        @apply grid grid-cols-1 md:grid-cols-2 justify-items-center gap-5 p-1 px-2 md:p-4 md:px-10;
     }
     .logo-imag {
         @apply mask-cover;
     }
-
+    .home-content-me{
+        @apply grid grid-rows-3 gap-4   bg-gray-500 ;
+    }
+    .glow-left-top{
+        @apply pointer-events-none absolute -left-32 -top-32 -z-10 h-96 w-96 rounded-full bg-blue-300/30 blur-3xl dark: bg-blue-700/20;
+    }
+    .glow-right-botom{
+        @apply pointer-events-none absolute -bottom-40 -right-32 -z-10 h-96 w-96 rounded-full bg-purple-300/30 blur-3xl dark: bg-purple-700/20;
+    }
 }
+
 /* }
  {
     

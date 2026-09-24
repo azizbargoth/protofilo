@@ -23,7 +23,7 @@ const AppRouter = ()=> {
     <div className="">
        <Header />
       {/*<ScrollHandler /> */}
-      <main className=" ">
+      <main className="">
         <Routes>
           <Route path="/" element={
             <>
