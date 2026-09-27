@@ -29,8 +29,8 @@ const AppRouter = ()=> {
             <>
                <Home />
              {/* <About />
-              <Education/>
-              <Skills /> */}
+              <Education/>*/}
+              <Skills /> 
               <Experience />
               {/* <Services />
               <Projects />

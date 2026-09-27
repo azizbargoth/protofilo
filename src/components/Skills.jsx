@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Skills.css';
+import "../js/skills"
 
 // Import icons from react-icons
 import {
@@ -10,8 +11,11 @@ import {
 } from 'react-icons/fa';
 import {
   SiTypescript, SiTailwindcss, SiRedux, SiMongodb,
-  SiExpress
+  SiExpress,
+  SiAdminer
 } from 'react-icons/si';
+import { DiDatabase, DiMsqlServer } from 'react-icons/di';
+import { FcComboChart } from 'react-icons/fc';
 
 const Skills = () => {
   const { language } = useTheme();
@@ -132,109 +136,160 @@ const Skills = () => {
     descriptionEn: 'Excellent collaboration and communication skills, working effectively in agile teams. Strong problem-solving abilities with analytical thinking. Proven time management and ability to meet deadlines while maintaining quality.',
     descriptionAr: 'مهارات تعاون وتواصل ممتازة، العمل بفعالية في فرق agile. قدرات قوية في حل المشكلات مع التفكير التحليلي. إدارة وقت مثبتة والقدرة على الوفاء بالمواعيد النهائية مع الحفاظ على الجودة.'
   };
+  const databaseSkills = {
+    title: language === "ar" ? "المهارات الشخصية" : "Soft Skills",
+    technologies: [
+      {
+        name: "SQL Server",
+        icon: <DiMsqlServer />,
+        color: "#c1121f",
+        descriptionEn:
+          "Collaborative development, security reviews, user security, Backup and restor, server and terminals config,create and publish databases , import and export data ,write on demand queries,",
+        descriptionAr:
+          "التطوير التعاوني، ومراجعات الأمان، وأمن المستخدم، والنسخ الاحتياطي والاستعادة، وتهيئة الخوادم وأجهزة الطرفيات، وإنشاء قواعد البيانات ونشرها، واستيراد البيانات وتصديرها، وكتابة الاستعلامات عند الطلب.",
+      },
+      {
+        name: "DataBase",
+        icon: <DiDatabase />,
+        color: "#68A063",
+        descriptionEn:
+          "Analysis and create various databases for in my role career or local market",
+        descriptionAr:
+          "إجراء التحليلات وإنشاء قواعد بيانات متنوعة في إطار مساري المهني أو لخدمة السوق المحلية.",
+      },
+      {
+        name: "Database Admin",
+        icon: <SiAdminer />,
+        color: "#540b0e",
+        descriptionEn:
+          "Manage many databases efficiently keeping data functionality with the best performance",
+        descriptionAr:
+          "إدارة العديد من قواعد البيانات بكفاءة، مع الحفاظ على وظائف البيانات وتحقيق أفضل أداء.",
+      },
+      {
+        name: "Power BI",
+        icon: <FcComboChart />,
+        color: "#F05032",
+        descriptionEn:
+          "Link Power BI dashboards with data sources like SQL server or excel ....",
+        descriptionAr:
+          "اربط لوحات معلومات Power BI بمصادر بيانات مثل SQL Server أو Excel...",
+      },
+    ],
+    descriptionEn:
+      "Excellent collaboration and communication skills, working effectively in agile teams. Strong problem-solving abilities with analytical thinking. Proven time management and ability to meet deadlines while maintaining quality.",
+    descriptionAr:
+      "مهارات تعاون وتواصل ممتازة، العمل بفعالية في فرق agile. قدرات قوية في حل المشكلات مع التفكير التحليلي. إدارة وقت مثبتة والقدرة على الوفاء بالمواعيد النهائية مع الحفاظ على الجودة.",
+  };
 
   // Category buttons
   const categories = [
-    { id: 'front', nameEn: 'FrontEnd Skills', nameAr: 'مهارات الواجهه الامامية' },
-    { id: 'back', nameEn: 'BackEnd Skills', nameAr: 'مهارات الواجهه الخلفية' },
-    { id: 'soft', nameEn: 'Soft Skills', nameAr: 'المهارات الشخصية' },
+    {
+      id: "front",
+      nameEn: "FrontEnd Skills",
+      nameAr: "مهارات الواجهه الامامية",
+    },
+    { id: "back", nameEn: "BackEnd Skills", nameAr: "مهارات الواجهه الخلفية" },
+    { id: "data", nameEn: "Databse Skills", nameAr: "مهارات قواعد البيانات" },
+    { id: "soft", nameEn: "Soft Skills", nameAr: "المهارات الشخصية" },
   ];
 
-  const currentSkills = activeCategory === 'front' ? frontendSkills : activeCategory === 'back' ? backendSkills : softSkills;
+  const currentSkills = activeCategory === 'front' ? frontendSkills : activeCategory === 'back' ? backendSkills :activeCategory==='data'?databaseSkills: softSkills;
 
   return (
-    <section id="skills" className="section skills-section">
-      <div className="container">
-        <div className="row mb-4">
-          <div className="col-12 text-center">
-            <h1 className="section-title">
-              {language === 'ar' ? 'مهاراتي' : 'My Skills'}
-            </h1>
-            <p className="section-subtitle">
-              {language === 'ar'
-                ? 'مجموعة من المهارات التقنية والشخصية التي أمتلكها'
-                : 'A collection of technical and soft skills I possess'}
-            </p>
-          </div>
+    <section id="skills" className="section">
+      <div className=" mb-4">
+        <div className="flex text-center flex-col">
+          <h1 className=" gradient-text section-title1 ">
+            {language === "ar" ? "مهاراتي" : "My Skills"}
+          </h1>
+          <p className="">
+            {language === "ar"
+              ? "مجموعة من المهارات التقنية والشخصية التي أمتلكها"
+              : "A collection of technical and soft skills I possess"}
+          </p>
+          <div className="line-div"></div>
         </div>
-
+      </div>
+      {/* section body */}
+      <div className=" card dark:hover:border-none">
         {/* Category Filter Buttons */}
-        <div className="skills-filter">
+        <div className="flex justify-center items-center flex-wrap  mb-4 gap-2 md:gap-4 lg:gap-6">
           {categories.map((category) => (
             <button
               key={category.id}
-              className={`filter-btn ${activeCategory === category.id ? 'active' : ''}`}
+              className={`skills-filter-btn  ${activeCategory === category.id ? "active" : ""}`}
               onClick={() => setActiveCategory(category.id)}
             >
-              {language === 'ar' ? category.nameAr : category.nameEn}
+              {language === "ar" ? category.nameAr : category.nameEn}
             </button>
           ))}
         </div>
 
-        <div className="section-content row">
+        <div className="card  ">
           {/* Skills Grid with Cards */}
-          <div className="skill-card mx-auto col-12">
-            <div className="skill-card-inner">
-              <h3 className="skills-title">{currentSkills.title}</h3>
+          <div className="card-body">
+            <h3 className="skills-title">{currentSkills.title}</h3>
 
-              <p className="skills-description">
-                {language === 'ar'
-                  ? currentSkills.descriptionAr
-                  : currentSkills.descriptionEn}
-              </p>
+            <p className="skills-description">
+              {language === "ar"
+                ? currentSkills.descriptionAr
+                : currentSkills.descriptionEn}
+            </p>
 
-              <div className="skills-grid">
-                {currentSkills.technologies.map((skill, index) => (
-                  <div key={index}>
-                    <div className="skill-card-inner">
-
-                      <div
-                        className="skill-icon-wrapper"
-                        style={{ color: skill.color }}
-                      >
-                        {skill.icon}
-                      </div>
-
-                      <h3 className="skill-name">{skill.name}</h3>
-
+            <div className="skills-grid">
+              {currentSkills.technologies.map((skill, index) => (
+                <div key={index}>
+                  <div className="skill-card-inner">
+                    <div
+                      className="skill-icon-wrapper"
+                      style={{ color: skill.color }}
+                    >
+                      {skill.icon}
                     </div>
+
+                    <h3 className="skill-name">{skill.name}</h3>
                   </div>
-                ))}
-              </div>
-
-
-            </div>
-          </div>
-
-          {/* Additional Info Section */}
-          <div className="skills-summary">
-            <div className="summary-item">
-              <span className="summary-number">{frontendSkills.technologies.length}+</span>
-              <span className="summary-label">
-                {language === 'ar' ? 'مهارة الواجهه الاماميه' : 'FrontEnd Skills'}
-              </span>
-            </div>
-            <div className="summary-item">
-              <span className="summary-number">{backendSkills.technologies.length}+</span>
-              <span className="summary-label">
-                {language === 'ar' ? 'مهارة الواجهه الخلفية' : 'BackEnd Skills'}
-              </span>
-            </div>
-            <div className="summary-item">
-              <span className="summary-number">{softSkills.technologies.length}+</span>
-              <span className="summary-label">
-                {language === 'ar' ? 'مهارة شخصية' : 'Soft Skills'}
-              </span>
-            </div>
-            <div className="summary-item">
-              <span className="summary-number">3+</span>
-              <span className="summary-label">
-                {language === 'ar' ? 'سنوات خبرة' : 'Years Experience'}
-              </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+        </div>
+        {/* Additional Info Section */}
+        <div className="skills-summary">
+          <div className="summary-item">
+            <span className="summary-number">
+              {frontendSkills.technologies.length}+
+            </span>
+            <span className="summary-label">
+              {language === "ar" ? "مهارة الواجهه الاماميه" : "FrontEnd Skills"}
+            </span>
+          </div>
+          <div className="summary-item">
+            <span className="summary-number">
+              {backendSkills.technologies.length}+
+            </span>
+            <span className="summary-label">
+              {language === "ar" ? "مهارة الواجهه الخلفية" : "BackEnd Skills"}
+            </span>
+          </div>
+          <div className="summary-item">
+            <span className="summary-number">
+              {softSkills.technologies.length}+
+            </span>
+            <span className="summary-label">
+              {language === "ar" ? "مهارة شخصية" : "Soft Skills"}
+            </span>
+          </div>
+          <div className="summary-item">
+            <span className="summary-number">3+</span>
+            <span className="summary-label">
+              {language === "ar" ? "سنوات خبرة" : "Years Experience"}
+            </span>
+          </div>
+        </div>
+      
     </section>
   );
 };

@@ -230,92 +230,104 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="section">
-            <div className="">
-                {/* Section Title */}
-                <div className="gradient-text">
-                        <h2 className="section-title1">
-                            {language === 'ar' ? 'الخبرات العملية' : 'Work Experience'}
-                        </h2>
-                        <div className='line-div'> </div>{/* red line div*/}
+      <section id="experience" className="section absolute">
+        <div className="">
+          {/* Section Title */}
+          <div className="gradient-text">
+            <h2 className="section-title1">
+              {language === "ar" ? "الخبرات العملية" : "Work Experience"}
+            </h2>
+            <div className="line-div"> </div>
+            {/* red line div*/}
+          </div>
+          {/* Timeline */}
+          <div className="card-container">
+            {experiences.map((exp) => (
+              <div key={exp.id} className="card">
+                {/* Timeline Content */}
+                <div className="">
+                  {/* Company Logo and Header */}
+                  <div className="card-header">
+                    <div className="company-logo-wrapper">
+                      <img
+                        src={exp.logo}
+                        alt={exp.company}
+                        className="card-img"
+                      />
+                    </div>
+                    <div className="">
+                      <h3 className="card-title">{exp.company}</h3>
+                      <div className="card-sub-title">
+                        <span className="">{exp.position}</span>
+                      </div>
+                    </div>
+                  </div>
 
-                </div> 
-                {/* Timeline */}
-                <div className="card-container">
-                    { experiences.map((exp) => (
-                        <div key={exp.id} className="card">
-                            {/* Timeline Content */}
-                            <div className="">
-                                {/* Company Logo and Header */}
-                                <div className="card-header">
-                                    <div className="company-logo-wrapper">
-                                        <img
-                                            src={exp.logo}
-                                            alt={exp.company}
-                                            className="card-img"
-                                        />
-                                    </div>
-                                    <div className="">
-                                        <h3 className="card-title">{exp.company}</h3>
-                                        <div className="card-sub-title">
-                                            <span className="">{exp.position}</span>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
+                  {/* Card body */}
+                  <div className="card-body border-b-2 pb-2 border-b-gray-400">
+                    <div className="my-2 md:my-4 text-center">
+                      <span className="job-type">{exp.type}</span>
+                    </div>
+                    <div className="">
+                      <FontAwesomeIcon
+                        icon={faCalendarDays}
+                        style={{ color: "rgb(177, 151, 252)" }}
+                      />
+                      <span className="font-normal ps-1 text-xs text-gray-400">
+                        {exp.period} · {exp.duration}
+                      </span>
+                    </div>
+                    <div className="">
+                      <FontAwesomeIcon
+                        icon={faLocationDot}
+                        style={{ color: "rgb(177, 151, 252)" }}
+                      />
+                      <span className="font-normal ps-1 text-xs text-gray-400">
+                        {exp.location} · {exp.locationType}
+                      </span>
+                    </div>
+                  </div>
 
-                                {/* Card body */}
-                                <div className="card-body border-b-2 pb-2 border-b-gray-400">
-                                    <div className='my-2 md:my-4 text-center'><span className="job-type">{exp.type}</span></div> 
-                                    <div className="">
-                                        <FontAwesomeIcon icon={faCalendarDays} style={{color: "rgb(177, 151, 252)",}} />
-                                        <span className='font-normal ps-1 text-xs text-gray-400'>{exp.period} · {exp.duration}</span>
-                                    </div>
-                                    <div className="">
-                                        <FontAwesomeIcon icon={faLocationDot} style={{color: "rgb(177, 151, 252)",}} />
-                                        <span className='font-normal ps-1 text-xs text-gray-400'>{exp.location} · {exp.locationType}</span>
-                                    </div>
-                                </div>
-                                   
-                                {/* Technologies */}
-                                <div className="flex gap-4 flex-wrap mt-4">
-                                    {exp.technologies.map((tech, idx) => (
-                                        <span
-                                            key={idx}
-                                            className=" bg-gray-100 rounded-2xl px-2 py-1 flex items-center gap-1"
-                                            // style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
-                                        >
-                                            <span style={{ color: tech.color, fontSize: '12px' }}>
-                                                {tech.icon}
-                                            </span>
-                                            <span className='text-xs'>{tech.name}</span>
-                                        </span>
-                                    ))}
-                                </div>
+                  {/* Technologies */}
+                  <div className="flex gap-4 flex-wrap mt-4">
+                    {exp.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className=" bg-gray-100 dark:text-gray-800 rounded-2xl px-2 py-1 flex items-center gap-1"
+                        // style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+                      >
+                        <span style={{ color: tech.color, fontSize: "12px" }}>
+                          {tech.icon}
+                        </span>
+                        <span className="text-xs">{tech.name}</span>
+                      </span>
+                    ))}
+                  </div>
 
-                                {/* CAR Section */}
-                                <div className="card-body-detials">
-                                    {/* Challenge */}
-                                    {/* <div className="car-item ">
+                  {/* CAR Section */}
+                  <div className="card-body-detials">
+                    {/* Challenge */}
+                    {/* <div className="car-item ">
                                         <div className="car-icon">
                                             <span className="car-label">{language === 'ar' ? 'التحدي' : 'Challenge'}</span>
                                         </div>
                                         <p className="car-text">{exp.challenge}</p>
                                     </div> */}
 
-                                    {/* Action */}
-                                    <div className="car-item action-item">
-                                        <div className="car-icon">
-                                            <span className="car-label">{language === 'ar' ? 'المهام' : 'Roles'}</span>
-                                        </div>
-                                        <div className="car-text">
-                                            <div  className="leading-relaxed transition-all duration-300 " >
- {console.log("render erpppppp")}
-                                                <ExperienceCard action={exp.action}/>
-                                             
-                                            </div>
-                                            {/* Toggle Button */}
-                                                    {/* <div className="mt-3 flex justify-end">
+                    {/* Action */}
+                    <div className="car-item action-item">
+                      <div className="car-icon">
+                        <span className="car-label">
+                          {language === "ar" ? "المهام" : "Roles"}
+                        </span>
+                      </div>
+                      <div className="car-text">
+                        <div className="leading-relaxed transition-all duration-300 ">
+                          {console.log("render erpppppp")}
+                          <ExperienceCard action={exp.action} />
+                        </div>
+                        {/* Toggle Button */}
+                        {/* <div className="mt-3 flex justify-end">
                                                         <button 
                                                         onClick={() => setisExpanded(!isExpanded)}
                                                         className="text-xs font-bold uppercase tracking-wider text-indigo-600 hover:text-indigo-800 transition-colors focus:outline-none"
@@ -323,28 +335,29 @@ const Experience = () => {
                                                         {isExpanded ? 'Show Less ▲' : 'Show More ▼'}
                                                         </button>
                                                     </div> */}
-                                        </div>
-                                    </div>
+                      </div>
+                    </div>
 
-                                    {/* Result */}
-                                    <div className="car-item result-item">
-                                        <div className="car-icon">
-                                            <span className="car-label">{language === 'ar' ? 'النتيجة' : 'Result'}</span>
-                                        </div>
-                                        <div className="car-text">
-                                            {exp.result.split('\n').map((line, idx) => (
-                                                <li key={idx}>{line.trim()}</li>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    ))}
+                    {/* Result */}
+                    <div className="car-item result-item">
+                      <div className="car-icon">
+                        <span className="car-label">
+                          {language === "ar" ? "النتيجة" : "Result"}
+                        </span>
+                      </div>
+                      <div className="car-text">
+                        {exp.result.split("\n").map((line, idx) => (
+                          <li key={idx}>{line.trim()}</li>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     );
 };
 

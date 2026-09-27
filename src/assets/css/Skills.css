@@ -1,12 +1,21 @@
 /* ====================================
    Skills Section Styles
    ==================================== */
-
+@import'tailwindcss';
+/* @theme{
+   
+}
+@layer components{
+    .section-filter{
+        @apply flex justify-center items-center flex-wrap mx-10 mb-4 gap-2 md:gap-4 lg:gap-6;
+    }
+} */
 .skills-section {
     padding: 6rem 0;
-    background: linear-gradient(135deg, var(--color-light), var(--color-white));
+    /* background: linear-gradient(135deg, var(--color-light), var(--color-white)); */
     position: relative;
     overflow: hidden;
+   
 }
 
 /* Decorative Elements */
@@ -37,15 +46,16 @@
 }
 
 /* Section Title */
-.section-title {
+/* .section-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--color-text-dark);
     position: relative;
     margin-bottom: 1rem;
-}
+    margin: auto;
+} */
 
-.section-title::after {
+/* .section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -55,23 +65,23 @@
     height: 4px;
     background: linear-gradient(90deg, var(--color-accent), var(--color-pink));
     border-radius: 2px;
-}
+} */
 
-.section-subtitle {
+/* .section-subtitle {
     font-size: 1.1rem;
     color: var(--color-text-light);
     max-width: 600px;
     margin: 1rem auto 0;
-}
+} */
 
 /* Skills Filter */
-.skills-filter {
+/* .skills-filter {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin: 2rem 0 3rem;
     flex-wrap: wrap;
-}
+} */
 
 .filter-btn {
     padding: 0.75rem 2rem;
@@ -126,9 +136,8 @@
 
 /* Skill Card */
 .skill-card {
-    background: var(--color-white);
-    width: 650px;
-    border-radius: 20px;
+    /* background: var(--color-white); */
+
     padding: 1.8rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--color-gray);
@@ -252,7 +261,7 @@
 }
 
 /* Dark Mode */
-.dark-mode .skills-section {
+/* .dark-mode .skills-section {
     background: linear-gradient(135deg, var(--color-dark), var(--color-gray));
 }
 
@@ -289,16 +298,16 @@
 .dark-mode .filter-btn.active {
     background: linear-gradient(135deg, var(--color-accent), var(--color-pink));
     color: var(--color-white);
-}
+} */
 
 /* RTL Support */
-[dir="rtl"] .skill-description {
+/* [dir="rtl"] .skill-description {
     text-align: right;
 }
 
 [dir="rtl"] .skills-filter {
     direction: rtl;
-}
+} */
 
 /* Responsive */
 @media (max-width: 768px) {
