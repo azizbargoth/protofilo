@@ -32,7 +32,7 @@ const Home = () => {
 
   // Words based on language
   const words = useMemo(() => {
-    return language === "en"
+    return language === "En"
       ? ["Full Stack Developer", "Database Admin"]
       : ["مطور ويب متكامل", "مدير قاعدة البيانات"];
   }, [language]);
@@ -105,17 +105,17 @@ const Home = () => {
           {/* Hero text */}
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-400">
-              {language === "ar" ? "مرحباً! أنا، " : "Hi! I'm "}
+              {language === "Ar" ? "مرحباً! أنا، " : "Hi! I'm "}
             </p>
 
             <h1 className="max-w-2xl text-lg xs:2xl font-black leading-[1.05] tracking-tight sm:text-3xl lg:text-4xl">
-              {language === "ar"
+              {language === "Ar"
                 ? "عبدالعزيز برغوث، "
                 : "Abdulaziz Salih Barghoth "}
               <span className="block mt-10 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
                 <h2
                   className={
-                    language === "ar"
+                    language === "Ar"
                       ? "bg-gradient-to-l from-transparent to-pink-900 w-fit"
                       : "bg-gradient-to-r from-transparent to-pink-900 w-fit"
                   }
@@ -129,7 +129,7 @@ const Home = () => {
 
           <div className="">
             <p className="mt-8 max-w-xl text-xs md:text-sm xl:text-lg leading-8 text-slate-600 dark:text-slate-400">
-              {language === "ar"
+              {language === "Ar"
                 ? "مطور تطبيقات متكاملة متخصص في React و Node.js"
                 : "I am Informatics Engineer and Full-Stack Developer with 8+ years of professional experience in database and systems development, plus hands-on full-stack web development experience. Skilled in building business applications and web solutions using React, JavaScript, Node.js, Express, C#, SQL Server, PostgreSQL, database design, authentication, reporting. Strong background in solving real-world business problems and delivering practical applications for humanitarian and local-market clients. "}
             </p>
@@ -140,21 +140,21 @@ const Home = () => {
                 onClick={scrollToProjects}
                 className="rounded-full bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-slate-900/20 transition hover:-translate-y-1 hover:bg-blue-600 dark:bg-white dark:text-slate-950 dark:hover:bg-blue-400"
               >
-                {language === "ar" ? "عرض المشاريع" : "View Projects"}
+                {language === "Ar" ? "عرض المشاريع" : "View Projects"}
               </button>
 
               <button
                 onClick={handleDownloadCV}
                 className="rounded-full border border-slate-300 px-6 py-3 text-sm font-bold text-slate-700 transition hover:-translate-y-1 hover:border-blue-500 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400"
               >
-                {language === "ar" ? "تحميل السيرة الذاتية" : "Download CV"}
+                {language === "Ar" ? "تحميل السيرة الذاتية" : "Download CV"}
               </button>
             </div>
             {/* <button className="secondary-btn" onClick={scrollToProjects}>
-              {language === "ar" ? "عرض المشاريع" : "View Projects"}
+              {language === "Ar" ? "عرض المشاريع" : "View Projects"}
             </button>
             <button className="primary-btn " onClick={handleDownloadCV}>
-              {language === "ar" ? "تحميل السيرة الذاتية" : "Download CV"}
+              {language === "Ar" ? "تحميل السيرة الذاتية" : "Download CV"}
             </button> */}
           </div>
         </div>

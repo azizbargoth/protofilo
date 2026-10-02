@@ -31,14 +31,22 @@ export const categories = [
 
 export const skillsByCategory = {
   front: {
-    titleEn: "Frontend Development with React",
+    titleEn: "Frontend Development with React in Js File",
     titleAr: "تطوير الواجهة الأمامية باستخدام React",
     descriptionEn:
       "Designing and developing scalable web applications with modern frontend technologies.",
     descriptionAr:
       "تصميم وتطوير تطبيقات ويب قابلة للتوسع باستخدام تقنيات الواجهة الأمامية الحديثة.",
     technologies: [
-      { name: "HTML5", icon: FaHtml5, color: "#E34F26" },
+      {
+        name: "HTML5",
+        icon: FaHtml5,
+        color: "#E34F26",
+        descriptionEn:
+          "Designing and developing scalable, high-performance web applications with modern frontend technologies, focusing on clean architecture, maintainable code, optimized rendering, and seamless user experience across devices.",
+        descriptionAr:
+          "تصميم وتطوير تطبيقات ويب قابلة للتوسع وعالية الأداء باستخدام أحدث تقنيات الواجهة الأمامية، مع التركيز على الهندسة النظيفة، الكود القابل للصيانة، الأداء المحسن، وتجربة مستخدم سلسة عبر جميع الأجهزة.",
+      },
       { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
       { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
@@ -57,7 +65,15 @@ export const skillsByCategory = {
     descriptionAr:
       "بناء تطبيقات خادم قوية وواجهات REST وربطها بقواعد البيانات.",
     technologies: [
-      { name: "Node.js", icon: FaNodeJs, color: "#68A063" },
+      {
+        name: "Node.js",
+        icon: FaNodeJs,
+        color: "#68A063",
+        descriptionEn:
+          "Building robust, secure, and scalable server-side applications with Node.js and Express.js. Designing RESTful APIs, implementing authentication and authorization, managing databases, and ensuring optimal performance and reliability.",
+        descriptionAr:
+          "بناء تطبيقات خادم قوية وآمنة وقابلة للتوسع باستخدام Node.js و Express.js. تصميم RESTful APIs، تنفيذ المصادقة والتفويض، إدارة قواعد البيانات، وضمان الأداء الأمثل والموثوقية.",
+      },
       { name: "Express.js", icon: SiExpress, color: "#000000" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "Git", icon: FaGitAlt, color: "#F05032" },
@@ -146,4 +162,15 @@ export const skillsByCategory = {
       },
     ],
   },
+};
+export const getCategoryDescriptions = (categoryKey, lang = "En") => {
+  const category = skillsByCategory[categoryKey];
+  if (!category || !category.technologies) return "";
+
+  const propName = `description${lang}`;
+
+  return category.technologies
+    .map((tech) => tech[propName])
+    .filter(Boolean) // Excludes items that don't have a description (like HTML, CSS in your front array)
+    .join(". ");
 };

@@ -32,9 +32,9 @@ const AppRouter = ()=> {
               <Education/>*/}
               <Skills /> 
               <Experience />
-              {/* <Services />
+               <Services />
               <Projects />
-              <Achievements />
+              {/*<Achievements />
               <Testimonials />
               <Connect />
               <Footer/> */}

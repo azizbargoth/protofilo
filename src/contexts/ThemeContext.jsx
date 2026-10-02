@@ -18,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
 
   const [language, setLanguage] = useState(() => {
     const savedLang = localStorage.getItem('language');
-    return savedLang || 'en';
+    return savedLang || 'En';
   });
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('language', language);
     document.documentElement.lang = language;
-    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.dir = language === 'Ar' ? 'rtl' : 'ltr';
   }, [language]);
 
   const toggleTheme = () => {
@@ -41,7 +41,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'ar' : 'en');
+    setLanguage(prev => prev === 'En' ? 'Ar' : 'En');
   };
 
   return (

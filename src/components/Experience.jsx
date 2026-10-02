@@ -35,8 +35,8 @@ import ExperienceCard from './ExperienceCard';
 const Experience = () => {
     const { language } = useTheme();
 //     const [showlist,setShwolist]=useState([])
-//    {  language ==='ar'?setShwolist(expAR):setShwolist(expEN)}
-// const showlist= language ==='ar'?expAR:expEN;
+//    {  language ==='Ar'?setShwolist(expAR):setShwolist(expEN)}
+// const showlist= language ==='Ar'?expAR:expEN;
 // const [isExpanded,setisExpanded]=useState(false)
     const experiences = [
         {
@@ -44,11 +44,11 @@ const Experience = () => {
             company: 'BLUMONT Inc',
             companyEn: 'BLUMoNT',
             logo: blumontLogo,
-            position: language === 'ar' ? 'مطور Full Stack' : 'Database Management Officer',
+            position: language === 'Ar' ? 'مطور Full Stack' : 'Database Management Officer',
             positionEn: 'Full Stack Web Developer',
-            type: language === 'ar' ? 'دوام كامل' : 'Full-time',
+            type: language === 'Ar' ? 'دوام كامل' : 'Full-time',
             period: 'Oct 2018 – Apr 2026',
-            duration: language === 'ar' ? '3 شهور' : '8 years',
+            duration: language === 'Ar' ? '3 شهور' : '8 years',
             location: 'Hassakah, Syria',
             locationType: 'On-site',
             technologies: [
@@ -96,13 +96,13 @@ const Experience = () => {
                     color:"#000007"
                 }
             ],
-            challenge: language === 'ar'
+            challenge: language === 'Ar'
                 ? 'كان التطبيق يعاني من بطء شديد في تحميل البيانات وأداء ضعيف في الاستعلامات، مما أثر سلباً على تجربة المستخدمين.'
                 : 'The application suffered from slow data loading and poor query performance, negatively impacting user experience.',
-            action: language === 'ar'
+            action: language === 'Ar'
                 ? ARBlumontRoles
                 : ENBlumontrole,
-            result: language === 'ar'
+            result: language === 'Ar'
                 ? ' تحسين سرعة تحميل البيانات بنسبة 85%\n تقليل زمن استجابة الـ API من 3 ثوانٍ إلى أقل من 0.5 ثانية\n زيادة رضا المستخدمين وتحسين معدل الاحتفاظ بنسبة 25%'
                 : ' Improved data loading speed by 85%\n Reduced API response time from 3 seconds to under 0.5 seconds\n Increased user satisfaction and retention rate by 25%',
             isCurrent: true
@@ -112,11 +112,11 @@ const Experience = () => {
             company: 'Freelance / Team Projects',
             companyEn: 'Freelance Full-Stack Developer',
             logo: freeLancerLogo,
-            position: language === 'ar' ? 'متدرب تطوير واجهة أمامية' : 'Freelance Full-Stack Developer',
+            position: language === 'Ar' ? 'متدرب تطوير واجهة أمامية' : 'Freelance Full-Stack Developer',
             positionEn: 'Front-End Development Intern',
-            type: language === 'ar' ? 'المشروع' : 'project based',
+            type: language === 'Ar' ? 'المشروع' : 'project based',
             period: 'Aug 2023 – Present',
-            duration: language === 'ar' ? '3 سنوات' : '3 years',
+            duration: language === 'Ar' ? '3 سنوات' : '3 years',
             location: 'Freelance',
             locationType: 'Remote',
             technologies: [{
@@ -171,13 +171,13 @@ const Experience = () => {
                 color: '#000012',
             }
             ],
-            challenge: language === 'ar'
+            challenge: language === 'Ar'
                 ? 'تطبيق التجارة الإلكترونية كان يعاني من واجهة مستخدم غير متجاوبة وضعف في إعادة استخدام المكونات، مما زاد من وقت التطوير والتعقيد.'
                 : 'The e-commerce application had a non-responsive UI and poor component reusability, increasing development time and complexity.',
-            action: language === 'ar'
+            action: language === 'Ar'
                 ? ARFullDev
                 : ENFullDev,
-            result: language === 'ar'
+            result: language === 'Ar'
                 ? ' تقليل وقت تطوير الميزات الجديدة بنسبة 40%\n تحسين تجربة المستخدم عبر جميع الأجهزة\n إعادة استخدام المكونات بنسبة 60% في صفحات مختلفة'
                 : ' Reduced new feature development time by 40%\n Improved user experience across all devices\n Achieved 60% component reusability across different pages',
             isCurrent: false
@@ -187,11 +187,11 @@ const Experience = () => {
             company: 'Al-Furat University',
             companyEn: 'Part-Time Instructor',
             logo: alfuratLogo,
-            position: language === 'ar' ? 'مدرس في الجامعة' : 'Part-Time Instructor',
+            position: language === 'Ar' ? 'مدرس في الجامعة' : 'Part-Time Instructor',
             positionEn: 'Part-Time Instructor',
-            type: language === 'ar' ? 'عقد' : 'contract',
+            type: language === 'Ar' ? 'عقد' : 'contract',
             period: ' Oct 2014 – Feb 2017',
-            duration: language === 'ar' ? 'سنتين ' : '2 years',
+            duration: language === 'Ar' ? 'سنتين ' : '2 years',
             location: 'Remote',
             locationType: 'Remote',
             technologies: [
@@ -216,13 +216,13 @@ const Experience = () => {
                     color: '#7952B3',
                 }
             ],
-            challenge: language === 'ar'
+            challenge: language === 'Ar'
                 ? 'التطبيق كان يعاني من سوء تنظيم الكود وصعوبة في التعاون الجماعي بسبب عدم استخدام نظام فعال للتحكم في الإصدارات.'
                 : 'The application suffered from poor code organization and collaboration difficulties due to lack of effective version control.',
-            // action: language === 'ar'
+            // action: language === 'Ar'
             //     ? ' تطبيق سير عمل Git/GitHub باستخدام استراتيجية Git Flow\n إجراء مراجعات الكود (Code Reviews) لضمان جودة الكود\n إعادة هيكلة المشروع باستخدام مبدأ فصل المسؤوليات (Separation of Concerns)\n توثيق الـ API والتعامل معها باستخدام Axios'
             //     : ' Implemented Git/GitHub workflow using Git Flow strategy\n Conducted code reviews to ensure code quality\n Restructured project using Separation of Concerns principle\n Documented APIs and handled them using Axios',
-            result: language === 'ar'
+            result: language === 'Ar'
                 ? ' تحسين كفاءة التعاون الجماعي بنسبة 50%\n تقليل عدد الأخطاء البرمجية (Bugs) بنسبة 35%\n تسريع عملية التطوير بنسبة 30%'
                 : ' Improved team collaboration efficiency by 50%\n Reduced bugs by 35%\n Accelerated development process by 30%',
             isCurrent: false
@@ -230,12 +230,12 @@ const Experience = () => {
     ];
 
     return (
-      <section id="experience" className="section absolute">
+      <section id="experience" className="section pb-8 md:pb-20">
         <div className="">
           {/* Section Title */}
           <div className="gradient-text">
             <h2 className="section-title1">
-              {language === "ar" ? "الخبرات العملية" : "Work Experience"}
+              {language === "Ar" ? "الخبرات العملية" : "Work Experience"}
             </h2>
             <div className="line-div"> </div>
             {/* red line div*/}
@@ -309,7 +309,7 @@ const Experience = () => {
                     {/* Challenge */}
                     {/* <div className="car-item ">
                                         <div className="car-icon">
-                                            <span className="car-label">{language === 'ar' ? 'التحدي' : 'Challenge'}</span>
+                                            <span className="car-label">{language === 'Ar' ? 'التحدي' : 'Challenge'}</span>
                                         </div>
                                         <p className="car-text">{exp.challenge}</p>
                                     </div> */}
@@ -318,7 +318,7 @@ const Experience = () => {
                     <div className="car-item action-item">
                       <div className="car-icon">
                         <span className="car-label">
-                          {language === "ar" ? "المهام" : "Roles"}
+                          {language === "Ar" ? "المهام" : "Roles"}
                         </span>
                       </div>
                       <div className="car-text">
@@ -342,7 +342,7 @@ const Experience = () => {
                     <div className="car-item result-item">
                       <div className="car-icon">
                         <span className="car-label">
-                          {language === "ar" ? "النتيجة" : "Result"}
+                          {language === "Ar" ? "النتيجة" : "Result"}
                         </span>
                       </div>
                       <div className="car-text">

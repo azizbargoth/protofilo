@@ -126,7 +126,7 @@ const Header = () => {
                 }}
                 className="nav-item active:text-gray-100-200"
               >
-                {language === "ar"
+                {language === "Ar"
                   ? item.nameAr
                   : item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </a>
@@ -144,7 +144,7 @@ const Header = () => {
             }}
             className="nav-btn"
           >
-            {language === "ar" ? "تواصل معي" : "Connect Me"}
+            {language === "Ar" ? "تواصل معي" : "Connect Me"}
           </a>
 
           <div className="theme-language">
@@ -158,7 +158,7 @@ const Header = () => {
               onClick={toggleLanguage}
               className="text-gary-800 dark:text-gray-400 text-sm md:text-md"
             >
-              {language === "en" ? "عربي" : "EN"}
+              {language === "En" ? "عربي" : "EN"}
             </button>
           </div>
         </div>
@@ -178,7 +178,7 @@ const Header = () => {
                     }}
                     className="nav-item active:text-gray-100-200"
                   >
-                    {language === "ar"
+                    {language === "Ar"
                       ? item.nameAr
                       : item.name.charAt(0).toUpperCase() + item.name.slice(1)}
                   </a>
@@ -194,7 +194,7 @@ const Header = () => {
                 }}
                 className="nav-btn"
               >
-                {language === "ar" ? "تواصل معي" : "Connect Me"}
+                {language === "Ar" ? "تواصل معي" : "Connect Me"}
               </a>
               <div className=" space-x-2">
                 <button
@@ -207,7 +207,7 @@ const Header = () => {
                   onClick={toggleLanguage}
                   className="text-gary-800  px-2  dark:text-gray-400 text-sm md:text-md border border-gray-300 dark:border-gray-500 rounded-sm"
                 >
-                  {language === "en" ? "عربي" : "EN"}
+                  {language === "En" ? "عربي" : "EN"}
                 </button>
               </div>
             </div>
