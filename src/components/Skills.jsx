@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import '../assets/css/Skills.css';
 // import "../js/skills"
