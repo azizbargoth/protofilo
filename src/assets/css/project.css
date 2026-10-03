@@ -10,17 +10,12 @@
 }
 
 /* Section Header */
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
+
 
 .section-subtitle {
     text-align: center;
     color: var(--color-text-light);
     font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 3rem;
     line-height: 1.6;
 }
 
@@ -63,17 +58,6 @@
     flex-wrap: wrap;
 }
 
-.projects-filter .filter-btn {
-    padding: 0.75rem 2rem;
-    background-color: var(--color-white);
-    color: var(--color-text-dark);
-    border: 2px solid var(--color-gray);
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
 
 .projects-filter .filter-btn:hover {
     border-color: var(--color-accent);
@@ -84,7 +68,8 @@
 .projects-filter .filter-btn.active {
     background-color: var(--color-accent);
     color: var(--color-white);
-    border-color: var(--color-accent);
+    /* border-color: var(--color-dark); */
+    
 }
 
 

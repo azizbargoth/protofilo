@@ -200,7 +200,7 @@ const Skills = () => {
   const DescEn = getCategoryDescriptions(activeCategory, "En");
   const DescAr = getCategoryDescriptions(activeCategory, "Ar");
   return (
-    <section id="skills" className="section py-14">
+    <section id="skills" className="section pb-14">
       <div className=" mb-4">
         <div className="flex text-center flex-col">
           <h1 className=" gradient-text section-title1 ">

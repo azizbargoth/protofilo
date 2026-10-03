@@ -57,7 +57,8 @@ const Projects = () => {
           {categories.map((category) => (
             <button
               key={category.id}
-              className={`filter-btn ${activeCategory === category.id ? "active" : ""}`}
+              className={`filter-btn ${activeCategory === category.id ? "active" : ""}
+               text-gray-700 bg-gray-300 border-2 rounded-3xl focus:border-none  border-accent/80`}
               onClick={() => setActiveCategory(category.id)}
             >
               {language === "Ar" ? category.nameAr : category.nameEn}
@@ -66,84 +67,83 @@ const Projects = () => {
         </div>
 
         {/* Projects Count */}
-        <div className="projects-count">
+        <div className="projects-count  text-gray-700 bg-gray-300 border-2 rounded-3xl">
           {language === "Ar"
             ? `عرض ${filteredProjects.length} مشاريع`
             : `Showing ${filteredProjects.length} projects`}
         </div>
-
-        <Swiper
-          className="card"
-          modules={[Navigation]}
-          navigation
-          spaceBetween={25}
-          slidesPerView={3}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {filteredProjects.map((project) => (
-            <SwiperSlide key={project.id} className="">
-              <div className="project-card">
-                <div className="project-image-container">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="project-image"
-                  />
-                  <div className="project-overlay">
-                    <span className="project-category">
-                      {language === "Ar"
-                        ? project.categoryAr
-                        : project.category}
-                    </span>
+        <div className="card py-20 px-4 md:px-12">
+          <Swiper
+            modules={[Navigation]}
+            navigation
+            spaceBetween={25}
+            slidesPerView={3}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {filteredProjects.map((project) => (
+              <SwiperSlide key={project.id} className="">
+                <div className="project-card my-3 ">
+                  <div className="project-image-container">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="project-image"
+                    />
+                    <div className="project-overlay">
+                      <span className="project-category">
+                        {language === "Ar"
+                          ? project.categoryAr
+                          : project.category}
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                <div className="project-content">
-                  <h3 className="project-title">
-                    {language === "Ar" ? project.titleAr : project.title}
-                  </h3>
+                  <div className="project-content ">
+                    <h3 className="project-title">
+                      {language === "Ar" ? project.titleAr : project.title}
+                    </h3>
 
-                  <p className="project-description">
-                    {language === "Ar"
-                      ? project.descriptionAr.substring(0, 100) + "..."
-                      : project.description.substring(0, 100) + "..."}
-                  </p>
+                    <p className="project-description">
+                      {language === "Ar"
+                        ? project.descriptionAr.substring(0, 100) + "..."
+                        : project.description.substring(0, 100) + "..."}
+                    </p>
 
-                  <div className="project-actions">
-                    <button
-                      className="project-btn show-more"
-                      onClick={() => openModal(project)}
-                    >
-                      {language === "Ar" ? "عرض التفاصيل" : "Show More"}
-                    </button>
-
-                    <div className="project-links">
-                      <a
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-link live"
+                    <div className="project-actions">
+                      <button
+                        className="project-btn show-more"
+                        onClick={() => openModal(project)}
                       >
-                        <i className="fas fa-external-link-alt"></i>
-                      </a>
+                        {language === "Ar" ? "عرض التفاصيل" : "Show More"}
+                      </button>
+
+                      <div className="project-links">
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-link live"
+                        >
+                          <i className="fas fa-external-link-alt"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
         {/* Show message if no projects in category */}
         {filteredProjects.length === 0 && (
           <div className="no-projects">

@@ -116,9 +116,9 @@ export const skillsByCategory = {
         icon: FcComboChart,
         color: "#F05032",
         descriptionEn:
-          "Connecting dashboards to data sources such as SQL Server and Excel.",
+          "Connecting dashboards to data sources such as Power BI and Excel.",
         descriptionAr:
-          "ربط لوحات المعلومات بمصادر بيانات مثل SQL Server وExcel.",
+          "ربط لوحات المعلومات بمصادر بيانات مثل Power BI وExcel.",
       },
     ],
   },

@@ -85,10 +85,6 @@
 
 .filter-btn {
     padding: 0.75rem 2rem;
-    background-color: var(--color-white);
-    color: var(--color-text-dark);
-    border: 2px solid var(--color-gray);
-    border-radius: 40px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -119,9 +115,9 @@
 }
 
 .filter-btn.active {
-   border-color: var(--color-accent);
-    color: var(--color-accent);
-    border-color: transparent;
+   /* border-color: var(--color-accent); */
+    /* color: var(--color-accent); */
+    /* border-color: transparent; */
     box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
 }
 
